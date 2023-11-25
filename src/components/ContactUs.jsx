@@ -27,11 +27,11 @@ const ContactUs = () => {
           <Input type="email" value={email}  onChange={(e)=>setEmail(e.target.value)} required/>
         </FormControl>
         <FormControl>
-          <FormLabel>Write Here..</FormLabel>
+          <FormLabel>Write Here...</FormLabel>
           <Textarea value={text} onChange={(e)=>setText(e.target.value)}/>
         </FormControl>
         <FormControl>
-          <Input type="submit" id='submit' value='submit' borderRadius={"15px"} _hover={{fontWeight:"bold",cursor:"pointer",backgroundColor:'gray'}} />
+          <Input type="submit" id='submit' value='submit' borderRadius={"10px"} _hover={{fontWeight:"bold",cursor:"pointer",backgroundColor:'gray'}} />
         </FormControl>
       </form>
     </DIV>
@@ -55,7 +55,7 @@ font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial,
     height: 30px;
   }
   #submit{
-    width: 15%;
+    width: 17%;
     margin: auto;
     margin-top: 15px;
     display: flex;

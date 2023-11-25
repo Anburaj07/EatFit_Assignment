@@ -6,7 +6,7 @@ const Card = ({ name, cal, type, price, image }) => {
   return (
     <DIV id="card">
       <Box>
-        <Image w={"100%"} src={image} />
+        <Image w={"100%"} src={image} alt={name}/>
       </Box>
       <Text>{name}</Text>
       <Text color={"gray"}>
