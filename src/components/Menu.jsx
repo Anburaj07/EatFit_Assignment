@@ -16,7 +16,7 @@ const Menu = () => {
 
   const fetchFood = () => {
     setLoading(true);
-    let url = "https://eat-fit-server.onrender.com/foods?_page=1&_limit=12";
+    let url = "https://eat-fit-server.onrender.com/foods?_page=1&_limit=30";
 
     if (filterType !== "") {
       url += `&type=${filterType}`;
@@ -32,7 +32,7 @@ const Menu = () => {
       url += `&price_lte=${price}&price_gte=200`;
     }
     if (price >0 && price==301) {
-      url += `&price_gte=300`;
+      url += `&price_gte=301`;
     }
     axios
       .get(url)
