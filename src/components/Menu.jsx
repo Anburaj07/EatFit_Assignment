@@ -8,11 +8,15 @@ import Filter from './Filter';
 const Menu = () => {
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const [filterType,setFilterType]=useState('')
   useEffect(() => {
-    setLoading(true);
-    axios
-      .get('https://eat-fit-server.onrender.com/foods?_page=1&_limit=12')
+    fetchFood(filterType)
+  }, [filterType]);
+
+  const fetchFood=(filterType)=>{
+    if(filterType==''){
+      axios
+      .get(`https://eat-fit-server.onrender.com/foods?_page=1&_limit=12`)
       .then((res) => {
         setFoods(res.data);
       })
@@ -22,8 +26,22 @@ const Menu = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+    }else{
+      axios
+      .get(`https://eat-fit-server.onrender.com/foods?type=${filterType}&_page=1&_limit=12`)
+      .then((res) => {
+        setFoods(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+    }
+  }
 
+  console.log(filterType)
   return (
     <DIV>
       {loading && (
@@ -32,7 +50,7 @@ const Menu = () => {
           Loading...
         </Box>
       )}
-      <Filter/>
+      <Filter filterType={filterType} setFilterType={setFilterType}/>
       <Box id='foodMenu'>
         {foods.map((item) => (
           <Card key={item.id} {...item} />
