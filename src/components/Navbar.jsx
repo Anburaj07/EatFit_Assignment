@@ -97,9 +97,9 @@ const NavbarContainer = styled.div`
     .menu {
       display: none;
     }
-  }
-  #logo{
-    width: 35%;
+    #logo{
+      width: 35%;
+    }
   }
 
   .burger-icon {

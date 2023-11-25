@@ -68,4 +68,9 @@ const DIV = styled.div`
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   padding-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: auto;
+  }
 `;

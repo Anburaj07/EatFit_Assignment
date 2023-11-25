@@ -33,6 +33,7 @@ const DIV=styled.div`
   background-color: #052465;
   width: 100%;
   padding: 10px;
+  box-sizing: border-box;
   color: whitesmoke;
   #icons{
     width: 10%;

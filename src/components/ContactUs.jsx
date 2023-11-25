@@ -80,7 +80,6 @@ const DIV = styled.div`
   font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
   font-size: 20px;
-  justify-content: center;
 
   form {
     display: flex;
@@ -96,5 +95,20 @@ const DIV = styled.div`
     margin-bottom: 15px;
     border-radius: 10px;
     border: 1px solid gray;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    input,
+    textarea {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 15px;
+    }
+    #submit{
+      width: 100%;
+    }
   }
 `;

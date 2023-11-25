@@ -24,10 +24,17 @@ const HomePage = () => {
 export default HomePage;
 
 const DIV=styled.div`
+  box-sizing: border-box;
   #contacts{
     display: flex;
     justify-content: space-between;
     width: 95%;
     margin: auto;
+  }
+
+  @media (max-width: 768px) {
+    #contacts {
+      flex-direction: column;
+    }
   }
 `
