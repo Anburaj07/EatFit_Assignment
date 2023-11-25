@@ -1,12 +1,20 @@
 import { Box, Button, Select, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-const Filter = ({filterType,setFilterType}) => {
+const Filter = ({ filterType, setFilterType, price, setPrice }) => {
+  const handleTypeChange = (e) => {
+    setFilterType(e.target.value);
+  };
+
+  const handlePriceChange = (val) => {
+    setPrice(val);
+  };
+
   return (
     <DIV>
       <Box>
-        <select value={filterType} onChange={(e)=>setFilterType(e.target.value)}>
+        <select value={filterType} onChange={handleTypeChange}>
           <option value="">Select dietary preferences</option>
           <option value="vegan">vegan</option>
           <option value="High fiber">High fiber</option>
@@ -16,10 +24,18 @@ const Filter = ({filterType,setFilterType}) => {
       </Box>
       <Box id="sort">
         <Text>Sort By Price</Text>
-        <Button>All</Button>
-        <Button>0-200</Button>
-        <Button>201-300</Button>
-        <Button>301-400</Button>
+        <Button value={0} onClick={() => handlePriceChange(0)}>
+          All
+        </Button>
+        <Button value={200} onClick={() => handlePriceChange(200)}>
+          0-200
+        </Button>
+        <Button value={300} onClick={() => handlePriceChange(300)}>
+          201-300
+        </Button>
+        <Button value={301} onClick={() => handlePriceChange(301)}>
+          301+
+        </Button>
       </Box>
     </DIV>
   );
