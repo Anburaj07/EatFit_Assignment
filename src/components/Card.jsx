@@ -43,5 +43,8 @@ const DIV = styled.div`
       font-weight: bold;
       background-color: #052465;
     }
+    button:hover{
+        cursor: pointer;
+    }
   }
 `;

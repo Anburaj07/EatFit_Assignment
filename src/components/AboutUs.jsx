@@ -31,6 +31,7 @@ export default AboutUs;
 
 const DIV=styled.div`
   background-color: #052465;
+  width: 100%;
   padding: 10px;
   color: whitesmoke;
   #icons{

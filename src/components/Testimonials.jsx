@@ -5,7 +5,7 @@ import femaleAvatar from "../images/femaleAvatar.jpg";
 import styled from "styled-components";
 const Testimonials = () => {
   return (
-    <DIV>
+    <DIV id="testimonials">
       <Heading>Testimonials</Heading>
       <Box id="testimonial">
         <Box w={"80%"} m={"auto"}>
@@ -23,9 +23,8 @@ const Testimonials = () => {
           </Heading>
         </Box>
         <Text>
-          Joining EATFIT was a game-changer for me. In just a short span, I
-          gained invaluable knowledge about nutrition and healthy living. EATFIT
-          has truly been a transformative experience for my well-being.
+          EATFIT has transformed my approach to healthy eating. Their delicious
+          and nutritious meals make wellness a delightful journey
         </Text>
       </Box>
       <br />
@@ -45,9 +44,8 @@ const Testimonials = () => {
           </Heading>
         </Box>
         <Text>
-          EATFIT has been a wellness revelation for me. In a brief time, I
-          acquired essential knowledge about nutrition and health. Grateful for
-          this enriching journey towards a healthier lifestyle!
+          EATFIT has redefined my dining experience. Flavorful, wholesome meals
+          delivered with efficiency—every bite feels like a wellness boost!
         </Text>
       </Box>
     </DIV>
@@ -64,7 +62,7 @@ const DIV = styled.div`
     justify-content: space-around;
   }
 
-  #testimonial{
+  #testimonial {
     padding: 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

@@ -13,7 +13,7 @@ const Filter = ({ filterType, setFilterType, order, setOrder }) => {
 
   return (
     <DIV>
-      <Box>
+      <Box id="filter">
         <select value={filterType} onChange={handleTypeChange}>
           <option value="">Select dietary preferences</option>
           <option value="vegan">vegan</option>
@@ -28,7 +28,7 @@ const Filter = ({ filterType, setFilterType, order, setOrder }) => {
           Low-High
         </Button>
         <Button value={"desc"} onClick={() => handleOrder("desc")}>
-        High-Low
+          High-Low
         </Button>
       </Box>
     </DIV>
@@ -50,24 +50,44 @@ const DIV = styled.div`
     padding: 13px;
     border-radius: 10px;
   }
-  option{
+  option {
     background-color: #ffffff;
     color: black;
   }
-  #sort{
-    width: 50%;
+  #sort {
+    width: 45%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    p{
-        font-weight: bold;
+    p {
+      font-weight: bold;
     }
   }
-  button{
+  button {
     padding: 13px;
     border-radius: 10px;
     background-color: #dbd8d8;
     border: none;
     width: 20%;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    #sort {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      button {
+        margin-left: 10px;
+        width: 30%;
+      }
+    }
+
+    #filter{
+        margin-top: 10px;
+    }
   }
 `;

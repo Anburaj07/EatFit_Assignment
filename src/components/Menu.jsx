@@ -1,9 +1,6 @@
 import {
   Box,
   CircularProgress,
-  Skeleton,
-  SkeletonText,
-  Spinner,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -43,10 +40,8 @@ const Menu = () => {
         console.log(err);
       });
   };
-
-  console.log(filterType);
   return (
-    <DIV>
+    <DIV id="menu">
       <Filter
         filterType={filterType}
         setFilterType={setFilterType}
@@ -85,6 +80,12 @@ const DIV = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
+  @media (max-width: 768px) {
+    #foodMenu {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+
   #card:hover {
     color: inherit;
     cursor: pointer;
