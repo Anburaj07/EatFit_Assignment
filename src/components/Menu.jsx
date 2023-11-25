@@ -1,4 +1,10 @@
-import { Box, SkeletonText } from "@chakra-ui/react";
+import {
+  Box,
+  CircularProgress,
+  Skeleton,
+  SkeletonText,
+  Spinner,
+} from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
@@ -9,64 +15,62 @@ const Menu = () => {
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(false);
   const [filterType, setFilterType] = useState("");
-  const [price, setPrice] = useState(0);
+  const [order, setOrder] = useState("");
   useEffect(() => {
     fetchFood(filterType);
-  }, [filterType, price]);
+  }, [filterType, order]);
 
   const fetchFood = () => {
     setLoading(true);
-    let url = "https://eat-fit-server.onrender.com/foods?_page=1&_limit=30";
+    let url = "https://eat-fit-server.onrender.com/foods?_page=1&_limit=28";
 
     if (filterType !== "") {
       url += `&type=${filterType}`;
     }
-
-    if (price > 0) {
-      url += `&price_lte=${price}`;
+    if (order == "asc") {
+      url += `&_sort=price&_order=asc`;
     }
-    if (price >0 && price==200) {
-      url += `&price_lte=${price}&price_gte=0`;
-    }
-    if (price >0 && price==300) {
-      url += `&price_lte=${price}&price_gte=200`;
-    }
-    if (price >0 && price==301) {
-      url += `&price_gte=301`;
+    if (order == "desc") {
+      url += `&_sort=price&_order=desc`;
     }
     axios
       .get(url)
       .then((res) => {
+        setLoading(false);
         setFoods(res.data);
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        setLoading(false);
       });
   };
 
   console.log(filterType);
   return (
     <DIV>
-      {loading && (
-        <Box>
-          {/* <SkeletonText mt='4' noOfLines={4} spacing='4' height='10' /> */}
-          Loading...
-        </Box>
-      )}
       <Filter
         filterType={filterType}
         setFilterType={setFilterType}
-        price={price}
-        setPrice={setPrice}
+        order={order}
+        setOrder={setOrder}
       />
-      <Box id="foodMenu">
-        {foods.map((item) => (
-          <Card key={item.id} {...item} />
-        ))}
-      </Box>
+      {loading && (
+        <Box
+          height={"200px"}
+          w={"100%"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <CircularProgress value={59} size="100px" thickness="4px" />
+        </Box>
+      )}
+      {!loading && (
+        <Box id="foodMenu">
+          {foods.map((item) => (
+            <Card key={item.id} {...item} />
+          ))}
+        </Box>
+      )}
     </DIV>
   );
 };

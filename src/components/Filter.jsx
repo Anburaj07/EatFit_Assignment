@@ -2,13 +2,13 @@ import { Box, Button, Select, Text } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
 
-const Filter = ({ filterType, setFilterType, price, setPrice }) => {
+const Filter = ({ filterType, setFilterType, order, setOrder }) => {
   const handleTypeChange = (e) => {
     setFilterType(e.target.value);
   };
 
-  const handlePriceChange = (val) => {
-    setPrice(val);
+  const handleOrder = (val) => {
+    setOrder(val);
   };
 
   return (
@@ -24,17 +24,11 @@ const Filter = ({ filterType, setFilterType, price, setPrice }) => {
       </Box>
       <Box id="sort">
         <Text>Sort By Price</Text>
-        <Button value={0} onClick={() => handlePriceChange(0)}>
-          All
+        <Button value={"asc"} onClick={() => handleOrder("asc")}>
+          Low-High
         </Button>
-        <Button value={200} onClick={() => handlePriceChange(200)}>
-          0-200
-        </Button>
-        <Button value={300} onClick={() => handlePriceChange(300)}>
-          201-300
-        </Button>
-        <Button value={301} onClick={() => handlePriceChange(301)}>
-          301+
+        <Button value={"desc"} onClick={() => handleOrder("desc")}>
+        High-Low
         </Button>
       </Box>
     </DIV>
