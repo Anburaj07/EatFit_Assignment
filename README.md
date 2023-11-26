@@ -1,5 +1,20 @@
-# EatFit Company Assignment Project
+<div align="center">
+  <h2>EatFit Company Assignment Project </h2>
+ </div>
+ 
+<div align="center">
 
+ <h3>logo :"EATFIT"</h3>
+
+ 
+![logo](https://github.com/Anburaj07/EatFit_Assignment/assets/123880321/f3814886-5561-469c-bdc6-b62f5e4dc1d0)
+ 
+
+ 
+ ## 🌐 Deployed Link : https://eat-fit-assignment.vercel.app/ 
+
+ </div>
+ 
 ## Overview
 In this assignment, a simplified, single-page web application inspired by EatFit (https://www.eatfit.in/) has been created. The focus was on designing and implementing a responsive, user-friendly interface that reflects the essence of EatFit's offerings and user experience.
 
@@ -38,20 +53,39 @@ In this assignment, a simplified, single-page web application inspired by EatFit
 - react-scripts
 - @chakra-ui/react
 
-## How to Run Locally
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/EatFit_Assignment.git
-   ``` 
-2.  Go to the project directory:
-   ```
-     cd cd EatFit_Assignment
-  ```
-3. Install dependencies:
-      ```
-     npm install
-    ```
-4. Start the application:
-   ```
-   npm start
-  ```
+## ScreenShots 📷
+  ![Screenshot 2023-11-26 123654](https://github.com/Anburaj07/EatFit_Assignment/assets/123880321/d78cbe08-81dd-46b1-9aaf-1810055c44ed)
+
+  ![Screenshot 2023-11-26 123724](https://github.com/Anburaj07/EatFit_Assignment/assets/123880321/f18ade60-27d8-4ba1-b3b7-59db2537c613)
+
+  ##
+ 
+## Run Locally  💻
+
+<h4>1. Clone the project </h4>
+
+```
+git clone https://github.com/EatFit_Assignment.git
+
+```
+
+<h4>2. Go to the project directory </h4> 
+
+```
+cd EatFit_Assignment
+```
+<h4>3. Install dependencies </h4> 
+
+```
+ npm install
+```
+- Use node version(LTS) should be `v16.16.0`
+- Don't change/override package.json
+
+
+<h4>4. Start the server </h4>
+
+```
+  npm start
+```
+##
