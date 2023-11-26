@@ -19,66 +19,54 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let obj = {
-      name,
-      email,
-      text,
-    };
+    // alert( `Thank you for reaching out ${name}!`)
     toast({
+      position: 'top',
       title: `Thank you for reaching out ${name}!`,
       description: "We'll get back to you soon",
       status: "success",
       duration: 5000,
       isClosable: true,
     });
-    console.log(obj);
   };
   return (
     <DIV id="contact">
       <Heading>Contact Us</Heading>
       <form onSubmit={handleSubmit}>
-        <FormControl>
-          <Box id="box">
-            <FormLabel>Name</FormLabel>
-            <Input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </Box>
-        </FormControl>
-        <FormControl>
-          <Box id="box">
-            <FormLabel>Email</FormLabel>
-            <Input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </Box>
-        </FormControl>
-        <FormControl>
-          <Box id="box">
-            <FormLabel>Write Here...</FormLabel>
-            <Textarea w={"62%"} value={text} onChange={(e) => setText(e.target.value)} />
-          </Box>
-        </FormControl>
-        <FormControl>
-          <Input
-            type="submit"
-            id="submit"
-            value="submit"
-            // fontSize={"20px"}
-            _hover={{
-              fontWeight: "bold",
-              cursor: "pointer",
-              backgroundColor: "gray",
-              color: "white",
-            }}
-          />
-        </FormControl>
+        <Input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          placeholder="Your Name *"
+        />
+        <Input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          placeholder="Email Address *"
+        />
+        <Textarea
+          w={"62%"}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Write Here.."
+        />
+        <Button
+        onClick={()=>{
+          
+        }}
+          type="submit"
+          _hover={{
+            fontWeight: "bold",
+            cursor: "pointer",
+            backgroundColor: "gray",
+            color: "white",
+          }}
+        >
+          Submit
+        </Button>
       </form>
     </DIV>
   );
@@ -92,51 +80,53 @@ const DIV = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
-    margin-bottom: 15px;
-    border-radius: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 
-  #box {
+  form{
+    padding: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 25px;
+    gap: 20px;
   }
 
-  input {
+  button{
     width: 60%;
-      height: 30px;
-    border-radius: 10px;
-    border: 1px solid gray;
-  }
-  label,
-  input,
-  textarea {
-    border-radius: 10px;
-    font-size: 25px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color:#052465;
   }
 
-  #submit {
-    width: 50%;
-    margin-left: 150px;
+  input,textarea {
+    width: 60%;
+    height: 50px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px;
   }
+
 
   @media (max-width: 768px) {
     width: 90%;
     margin: auto;
     padding: 20px;
     font-size: 17px;
-    input {
-      width: 60%;
+    margin-bottom: 20px;
+    input,textarea {
+      width: 80%;
       height: 30px;
       margin: auto;
-      margin-left: 55px;
       font-size: 15px;
     }
-    #submit{
-      width: 40%;
-      margin-right: 50px;
+    button{
+    width: 50%;
     }
   }
 `;

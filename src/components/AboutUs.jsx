@@ -41,8 +41,14 @@ const DIV=styled.div`
     display: flex;
     justify-content: space-around;
   }
+  img{
+    margin: auto;
+  }
   a{
     text-decoration: none;
     color: white;
+  }
+  a:hover{
+    cursor: pointer;
   }
 `

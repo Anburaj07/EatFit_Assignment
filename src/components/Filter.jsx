@@ -1,4 +1,4 @@
-import { Box, Button, Select, Text } from "@chakra-ui/react";
+import { Box, Button,  Text } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
 

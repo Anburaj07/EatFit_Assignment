@@ -1,7 +1,4 @@
-import {
-  Box,
-  CircularProgress,
-} from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
@@ -13,6 +10,7 @@ const Menu = () => {
   const [loading, setLoading] = useState(false);
   const [filterType, setFilterType] = useState("");
   const [order, setOrder] = useState("");
+
   useEffect(() => {
     fetchFood(filterType);
   }, [filterType, order]);
@@ -50,13 +48,19 @@ const Menu = () => {
       />
       {loading && (
         <Box
-          height={"200px"}
+          height={"400px"}
           w={"100%"}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <CircularProgress value={59} size="100px" thickness="4px" />
+          <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="blue.500"
+            size="xl"
+          />
         </Box>
       )}
       {!loading && (
