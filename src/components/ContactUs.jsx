@@ -38,7 +38,7 @@ const ContactUs = () => {
       <Heading>Contact Us</Heading>
       <form onSubmit={handleSubmit}>
         <FormControl>
-          <Box>
+          <Box id="box">
             <FormLabel>Name</FormLabel>
             <Input
               type="text"
@@ -49,7 +49,7 @@ const ContactUs = () => {
           </Box>
         </FormControl>
         <FormControl>
-          <Box>
+          <Box id="box">
             <FormLabel>Email</FormLabel>
             <Input
               type="email"
@@ -60,9 +60,9 @@ const ContactUs = () => {
           </Box>
         </FormControl>
         <FormControl>
-          <Box>
+          <Box id="box">
             <FormLabel>Write Here...</FormLabel>
-            <Textarea value={text} onChange={(e) => setText(e.target.value)} />
+            <Textarea w={"62%"} value={text} onChange={(e) => setText(e.target.value)} />
           </Box>
         </FormControl>
         <FormControl>
@@ -70,7 +70,7 @@ const ContactUs = () => {
             type="submit"
             id="submit"
             value="submit"
-            fontSize={"20px"}
+            // fontSize={"20px"}
             _hover={{
               fontWeight: "bold",
               cursor: "pointer",
@@ -87,67 +87,56 @@ const ContactUs = () => {
 export default ContactUs;
 
 const DIV = styled.div`
-  margin-bottom: 30px;
   width: 40%;
-  padding: 30px;
-  padding-left: 20px;
-  border-radius: 15px;
+  padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
-  font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 
-  form {
+  #box {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
   }
-  input,
-  textarea {
-    height: 50px;
-    margin-bottom: 20px;
+
+  input {
+    width: 60%;
+      height: 30px;
     border-radius: 10px;
     border: 1px solid gray;
-    font-size: 20px;
+  }
+  label,
+  input,
+  textarea {
+    border-radius: 10px;
+    font-size: 25px;
+  }
+
+  #submit {
+    width: 50%;
+    margin-left: 150px;
   }
 
   @media (max-width: 768px) {
     width: 90%;
     margin: auto;
-    padding: 0;
+    padding: 20px;
     font-size: 17px;
-    input,
-    textarea {
-      /* border: 1px solid red; */
-      width: 80%;
+    input {
+      width: 60%;
       height: 30px;
       margin: auto;
-      margin-left: 15px;
+      margin-left: 55px;
       font-size: 15px;
     }
-    div {
-      /* border: 1px solid red; */
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-around;
-
-    width: 80%;
-    }
-    #submit {
-      width: 100%;
+    #submit{
+      width: 40%;
+      margin-right: 50px;
     }
   }
-  div {
-    width: 90%;
-    display: flex;
-    /* border: 1px solid red; */
-    justify-content: space-between;
-    align-items: center;    
-  
-    #submit {
-      width: 50%;
-      margin: auto;
-    }}
 `;
