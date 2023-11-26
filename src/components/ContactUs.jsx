@@ -12,16 +12,19 @@ import styled from "styled-components";
 import { useToast } from "@chakra-ui/react";
 
 const ContactUs = () => {
+  // State variables for name, email, and text
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
   const toast = useToast();
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert( `Thank you for reaching out ${name}!`)
+
+    // Display toast notification
     toast({
-      position: 'top',
+      position: "top",
       title: `Thank you for reaching out ${name}!`,
       description: "We'll get back to you soon",
       status: "success",
@@ -31,8 +34,12 @@ const ContactUs = () => {
   };
   return (
     <DIV id="contact">
+      {/* Contact Us heading */}
       <Heading>Contact Us</Heading>
+
+      {/* Contact form */}
       <form onSubmit={handleSubmit}>
+        {/* Input for name */}
         <Input
           type="text"
           value={name}
@@ -40,6 +47,8 @@ const ContactUs = () => {
           required
           placeholder="Your Name *"
         />
+
+        {/* Input for email */}
         <Input
           type="email"
           value={email}
@@ -47,16 +56,17 @@ const ContactUs = () => {
           required
           placeholder="Email Address *"
         />
+
+        {/* Textarea for message */}
         <Textarea
           w={"62%"}
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Write Here.."
         />
+
+        {/* Submit button */}
         <Button
-        onClick={()=>{
-          
-        }}
           type="submit"
           _hover={{
             fontWeight: "bold",
@@ -75,6 +85,7 @@ const ContactUs = () => {
 export default ContactUs;
 
 const DIV = styled.div`
+  // Styling for the container
   width: 40%;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -83,7 +94,8 @@ const DIV = styled.div`
   margin-bottom: 15px;
   border-radius: 10px;
 
-  form{
+  // Styling for the form
+  form {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -92,7 +104,8 @@ const DIV = styled.div`
     gap: 20px;
   }
 
-  button{
+  // Styling for the button
+  button {
     width: 60%;
     height: 50px;
     color: white;
@@ -100,10 +113,12 @@ const DIV = styled.div`
     font-size: 18px;
     border: none;
     border-radius: 5px;
-    background-color:#052465;
+    background-color: #052465;
   }
 
-  input,textarea {
+  // Styling for input and textarea
+  input,
+  textarea {
     width: 60%;
     height: 50px;
     border: 0.5px solid gray;
@@ -112,21 +127,22 @@ const DIV = styled.div`
     padding: 5px;
   }
 
-
+  // Responsive styling for smaller screens
   @media (max-width: 768px) {
     width: 90%;
     margin: auto;
     padding: 20px;
     font-size: 17px;
     margin-bottom: 20px;
-    input,textarea {
+    input,
+    textarea {
       width: 80%;
       height: 30px;
       margin: auto;
       font-size: 15px;
     }
-    button{
-    width: 50%;
+    button {
+      width: 50%;
     }
   }
 `;

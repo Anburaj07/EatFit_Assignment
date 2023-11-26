@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 
+// Navbar Component
 const Navbar = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
@@ -29,32 +30,47 @@ const Navbar = () => {
   );
 };
 
+// MobileMenu Component
 const MobileMenu = () => {
-  // mobile menu here
+  // State to manage mobile menu open/close
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Function to toggle mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Function to close mobile menu
   const closeMenu = () => {
     setMenuOpen(false);
   };
   return (
     <div>
-        
-        {menuOpen==true?    <div id="mobileNavBar">
-      <Link href="#about" onClick={closeMenu}>About Us</Link>
-      <Link href="#menu" onClick={closeMenu}>Menu</Link>
-      <Link href="#testimonials" onClick={closeMenu}>Testimonials</Link>
-      <Link href="#contact" onClick={closeMenu}>Contact Us</Link>
-    </div> :<FaBars className="burger-icon" onClick={toggleMenu} />}
+      {menuOpen == true ? (
+        <div id="mobileNavBar">
+          <Link href="#about" onClick={closeMenu}>
+            About Us
+          </Link>
+          <Link href="#menu" onClick={closeMenu}>
+            Menu
+          </Link>
+          <Link href="#testimonials" onClick={closeMenu}>
+            Testimonials
+          </Link>
+          <Link href="#contact" onClick={closeMenu}>
+            Contact Us
+          </Link>
+        </div>
+      ) : (
+        <FaBars className="burger-icon" onClick={toggleMenu} />
+      )}
     </div>
-
   );
 };
 
 export default Navbar;
 
+// Styled components for Navbar styling
 const NavbarContainer = styled.div`
   position: sticky;
   top: 0;
@@ -83,21 +99,21 @@ const NavbarContainer = styled.div`
     }
   }
 
-  #mobileNavBar{
+  #mobileNavBar {
     width: 50%;
     display: grid;
-    grid-template-columns:repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
-    a{
-        color: black;
-        text-decoration: none;
+    a {
+      color: black;
+      text-decoration: none;
     }
   }
   @media (max-width: 768px) {
     .menu {
       display: none;
     }
-    #logo{
+    #logo {
       width: 35%;
     }
   }

@@ -1,18 +1,21 @@
-import { Box, Button,  Text } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
 
 const Filter = ({ filterType, setFilterType, order, setOrder }) => {
+  // Function to handle changes in dietary preferences
   const handleTypeChange = (e) => {
     setFilterType(e.target.value);
   };
 
+  // Function to handle sorting order
   const handleOrder = (val) => {
     setOrder(val);
   };
 
   return (
     <DIV>
+         {/* Dropdown for selecting dietary preferences */}
       <Box id="filter">
         <select value={filterType} onChange={handleTypeChange}>
           <option value="">Select dietary preferences</option>
@@ -22,6 +25,7 @@ const Filter = ({ filterType, setFilterType, order, setOrder }) => {
           <option value="Non-vegetarian">Non-vegetarian</option>
         </select>
       </Box>
+      {/* Sorting options */}
       <Box id="sort">
         <Text>Sort By Price</Text>
         <Button value={"asc"} onClick={() => handleOrder("asc")}>
@@ -86,8 +90,8 @@ const DIV = styled.div`
       }
     }
 
-    #filter{
-        margin-top: 10px;
+    #filter {
+      margin-top: 10px;
     }
   }
 `;

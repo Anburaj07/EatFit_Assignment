@@ -5,13 +5,20 @@ import styled from "styled-components";
 const Card = ({ name, cal, type, price, image }) => {
   return (
     <DIV id="card">
+      {/* Image section */}
       <Box>
-        <Image w={"100%"} src={image} alt={name}/>
+        <Image w={"100%"} src={image} alt={name} />
       </Box>
+
+      {/* Name */}
       <Text>{name}</Text>
+
+      {/* Calories and Type */}
       <Text color={"gray"}>
         {cal}Cal | {type}
       </Text>
+
+      {/* Price and Add to Cart button */}
       <Box id="price">
         <Text>₹{price}</Text>
         <Button>ADD</Button>
@@ -43,8 +50,8 @@ const DIV = styled.div`
       font-weight: bold;
       background-color: #052465;
     }
-    button:hover{
-        cursor: pointer;
+    button:hover {
+      cursor: pointer;
     }
   }
 `;
