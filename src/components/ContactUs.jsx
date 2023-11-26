@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   FormControl,
   FormLabel,
@@ -8,11 +9,13 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useToast } from "@chakra-ui/react";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
+  const toast = useToast();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +24,13 @@ const ContactUs = () => {
       email,
       text,
     };
+    toast({
+      title: `Thank you for reaching out ${name}!`,
+      description: "We'll get back to you soon",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
     console.log(obj);
   };
   return (
@@ -28,26 +38,32 @@ const ContactUs = () => {
       <Heading>Contact Us</Heading>
       <form onSubmit={handleSubmit}>
         <FormControl>
-          <FormLabel>Name</FormLabel>
-          <Input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
+          <Box>
+            <FormLabel>Name</FormLabel>
+            <Input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </Box>
         </FormControl>
         <FormControl>
-          <FormLabel>Email address</FormLabel>
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <Box>
+            <FormLabel>Email</FormLabel>
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </Box>
         </FormControl>
         <FormControl>
-          <FormLabel>Write Here...</FormLabel>
-          <Textarea value={text} onChange={(e) => setText(e.target.value)} />
+          <Box>
+            <FormLabel>Write Here...</FormLabel>
+            <Textarea value={text} onChange={(e) => setText(e.target.value)} />
+          </Box>
         </FormControl>
         <FormControl>
           <Input
@@ -86,29 +102,52 @@ const DIV = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
   }
   input,
   textarea {
-    margin-left: 100px;
-    width: 300px;
     height: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-radius: 10px;
     border: 1px solid gray;
+    font-size: 20px;
   }
 
   @media (max-width: 768px) {
     width: 90%;
     margin: auto;
     padding: 0;
+    font-size: 17px;
     input,
     textarea {
-      width: 100%;
+      /* border: 1px solid red; */
+      width: 80%;
+      height: 30px;
       margin: auto;
-      margin-bottom: 15px;
+      margin-left: 15px;
+      font-size: 15px;
     }
-    #submit{
+    div {
+      /* border: 1px solid red; */
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-around;
+
+    width: 80%;
+    }
+    #submit {
       width: 100%;
     }
   }
+  div {
+    width: 90%;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;    
+  
+    #submit {
+      width: 50%;
+      margin: auto;
+    }}
 `;
