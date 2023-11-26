@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+<div align="center">
+  <h2>EatFit Company Assignment Project </h2>
+ </div>
+ 
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ <h3>logo :"EATFIT"</h3>
 
-## Available Scripts
+ 
+![logo](https://github.com/Anburaj07/EatFit_Assignment/assets/123880321/f3814886-5561-469c-bdc6-b62f5e4dc1d0)
+ 
 
-In the project directory, you can run:
+ 
+ ## 🌐 Deployed Link : https://eat-fit-assignment.vercel.app/ 
 
-### `npm start`
+ </div>
+ 
+## Overview
+In this assignment, a simplified, single-page web application inspired by EatFit (https://www.eatfit.in/) has been created. The focus was on designing and implementing a responsive, user-friendly interface that reflects the essence of EatFit's offerings and user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+### 1. Landing Page Design
+- A visually appealing landing page representing a health and wellness-focused food delivery service.
+- Sections like 'About Us', 'Menu', 'Testimonials', and 'Contact Us' provide comprehensive information.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Responsive Menu Section
+- A menu section showcasing various healthy meal options.
+- Each menu item includes a photo, a brief description, and the price.
+- Responsive design ensures a seamless experience on both desktop and mobile devices.
 
-### `npm test`
+### 3. Interactive Features
+- Basic sorting and filtering features in the menu section (e.g., sort by price, filter by dietary preferences like vegan, keto, etc.).
+- Added Hover effects on menu items for enhanced user engagement.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Contact Us Form
+- A simple and intuitive form in the 'Contact Us' section.
+- Fields for name, email, and a text area for messages.
+- Basic form validations for a smooth user experience.
+  
+### 5. Styling and Layout
+-Added Modern CSS techniques and aesthetic appeal for an engaging visual experience.
+- Implemented Responsive web design to ensure optimal viewing across various devices.
 
-### `npm run build`
+## Technologies Used
+- HTML5, CSS3 (SCSS or LESS can be used for styling)
+- JavaScript (React framework was used)
+- Chakra UI (for styling components)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependencies
+- Axios
+- react-icons
+- react-router-dom
+- react-scripts
+- @chakra-ui/react
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ScreenShots 📷
+  ![Screenshot 2023-11-26 123654](https://github.com/Anburaj07/EatFit_Assignment/assets/123880321/d78cbe08-81dd-46b1-9aaf-1810055c44ed)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ![Screenshot 2023-11-26 123724](https://github.com/Anburaj07/EatFit_Assignment/assets/123880321/f18ade60-27d8-4ba1-b3b7-59db2537c613)
 
-### `npm run eject`
+  ##
+ 
+## Run Locally  💻
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h4>1. Clone the project </h4>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+git clone https://github.com/EatFit_Assignment.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h4>2. Go to the project directory </h4> 
 
-## Learn More
+```
+cd EatFit_Assignment
+```
+<h4>3. Install dependencies </h4> 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+ npm install
+```
+- Use node version(LTS) should be `v16.16.0`
+- Don't change/override package.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<h4>4. Start the server </h4>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+  npm start
+```
+##
