@@ -41,6 +41,12 @@ In this assignment, a simplified, single-page web application inspired by EatFit
 -Added Modern CSS techniques and aesthetic appeal for an engaging visual experience.
 - Implemented Responsive web design to ensure optimal viewing across various devices.
 
+### 6. JSON Server for Menu Data
+- Utilized a JSON server for fetching food data in the menu section.
+- JSON server deployment link: [https://eat-fit-server.onrender.com/foods](https://eat-fit-server.onrender.com/foods)
+- JSON server repository link: [https://github.com/Anburaj07/eat_fit_server](https://github.com/Anburaj07/eat_fit_server)
+
+
 ## Technologies Used
 - HTML5, CSS3 (SCSS or LESS can be used for styling)
 - JavaScript (React framework was used)
