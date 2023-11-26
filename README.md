@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# EatFit Company Assignment Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+In this assignment, a simplified, single-page web application inspired by EatFit (https://www.eatfit.in/) has been created. The focus was on designing and implementing a responsive, user-friendly interface that reflects the essence of EatFit's offerings and user experience.
 
-## Available Scripts
+## Features
+### 1. Landing Page Design
+- A visually appealing landing page representing a health and wellness-focused food delivery service.
+- Sections like 'About Us', 'Menu', 'Testimonials', and 'Contact Us' provide comprehensive information.
 
-In the project directory, you can run:
+### 2. Responsive Menu Section
+- A menu section showcasing various healthy meal options.
+- Each menu item includes a photo, a brief description, and the price.
+- Responsive design ensures a seamless experience on both desktop and mobile devices.
 
-### `npm start`
+### 3. Interactive Features
+- Basic sorting and filtering features in the menu section (e.g., sort by price, filter by dietary preferences like vegan, keto, etc.).
+- Added Hover effects on menu items for enhanced user engagement.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 4. Contact Us Form
+- A simple and intuitive form in the 'Contact Us' section.
+- Fields for name, email, and a text area for messages.
+- Basic form validations for a smooth user experience.
+  
+### 5. Styling and Layout
+-Added Modern CSS techniques and aesthetic appeal for an engaging visual experience.
+- Implemented Responsive web design to ensure optimal viewing across various devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
+- HTML5, CSS3 (SCSS or LESS can be used for styling)
+- JavaScript (React framework was used)
+- Chakra UI (for styling components)
 
-### `npm test`
+## Dependencies
+- Axios
+- react-icons
+- react-router-dom
+- react-scripts
+- @chakra-ui/react
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/EatFit_Assignment.git
+   ``` 
+2.  Go to the project directory:
+   ```
+     cd cd EatFit_Assignment
+  ```
+3. Install dependencies:
+      ```
+     npm install
+    ```
+4. Start the application:
+   ```
+   npm start
+  ```
