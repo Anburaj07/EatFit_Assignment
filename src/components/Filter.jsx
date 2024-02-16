@@ -15,7 +15,7 @@ const Filter = ({ filterType, setFilterType, order, setOrder }) => {
 
   return (
     <DIV>
-         {/* Dropdown for selecting dietary preferences */}
+      {/* Dropdown for selecting dietary preferences */}
       <Box id="filter">
         <select value={filterType} onChange={handleTypeChange}>
           <option value="">Select dietary preferences</option>

@@ -42,7 +42,7 @@ const Menu = () => {
     axios
       .get(url)
       .then((res) => {
-         // Update state with fetched data
+        // Update state with fetched data
         setLoading(false);
         setFoods(res.data);
       })
@@ -96,7 +96,7 @@ const DIV = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
-  
+
   // Responsive layout for smaller screens
   @media (max-width: 768px) {
     #foodMenu {
@@ -104,7 +104,7 @@ const DIV = styled.div`
     }
   }
 
-   // Hover effect for the Card component
+  // Hover effect for the Card component
   #card:hover {
     color: inherit;
     cursor: pointer;
